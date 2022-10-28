@@ -1,0 +1,241 @@
+*{
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+    font-family: Roboto,-apple-system,sans-serif,Apple 
+    Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  }
+@media(max-width: 1088px){
+  .box{
+    margin-top: 20%;
+  }
+  
+}
+body{
+    overflow: hidden;
+    max-width: 100%;
+  height: 100%;
+  background:url("../images/logincover.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+::placeholder{
+    color: rgba(255, 255, 255, 0.747);
+}
+.form-box3{
+    overflow: hidden;
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: rgba(0, 0, 0, 0.336);
+    margin-top: 10%;
+    margin-right: 76.5%;
+    /* padding: 50px ; */
+    border: 1px solid rgba(196, 196, 196, 0.842);
+    border-radius: 10px;
+}
+.naveed{
+    display: inline-flex;
+    overflow: hidden;
+    margin: 35px 75px 0px;
+    position: relative;
+    box-shadow: 0 0 20px 9px #377d921f;
+    border-radius: 30px;
+    font-size: 13.3px;
+}
+.toggl{
+    overflow: hidden;
+    color: #fff;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+
+}
+#btn{
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(179, 177, 177, 0.493),#02141e);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.input-group3{
+    overflow: hidden;
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: 0.5s;
+}
+.input-field3{
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.733);
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit-btn3{
+    overflow: hidden;
+    color: #fff;
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, rgba(179, 177, 177, 0.493),#02141e);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.check-box3{
+    overflow: hidden;
+    margin: 30px 10px 30px 0;
+}
+swal.fire{
+    overflow: hidden;
+}
+span{
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+#login{
+    overflow: hidden;
+    color: #fff;
+    left: 50px;
+}
+#register{
+    overflow: hidden;
+    left: 50px;
+}
+.fa {
+    overflow: hidden;
+    margin: 30px auto;
+    padding: 20px;
+    font-size: 80px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    width: 30px;
+    margin: 0 12px;
+    box-shadow: 0 0 20px 0 #377d921f;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .fa-facebook {
+    background: linear-gradient(to right, #13858f,#2abcd6);
+    color: white;
+  }
+  .navbar1{
+    box-shadow:  5px 5px 80px #0d0d0e,
+      -5px -5px 80px ;
+     background-color: #0F1418;
+    position: fixed;
+    display: flex;
+     width: 100%;
+     height: 8%;
+     top: 0;
+     left: 0;
+     z-index: 2;
+     padding: 20px 4%;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+ }
+ .navbar1 .logo{
+    margin-bottom: 1%;
+  }
+  @media (max-width: 1556px){
+    #trading{
+        display: none;
+    }
+  }
+.navbar1 .logo h3{
+   
+    margin-top: -3%;
+    position: absolute;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    width: 18%;
+}
+.navbar1 .logo h3:hover{
+    color: white;
+}
+.navbar1 .login{
+    margin-left: 100%;
+    max-width: 60px;
+}
+.navbar1>ul{
+   justify-content: space-evenly;
+    margin-top: 15px;
+    margin-left: -50px;
+
+}
+.navbar1>ul>li :hover{
+    -webkit-text-stroke: 0.2px #2CD0D3;
+      color: #2CD0D3;
+}
+
+.navbar1>ul>li{
+    list-style: none;
+    display: inline-flex;
+    margin-left: 40px;
+}
+.navbar1>ul>li>a{
+    transition: 0.5s;
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
+.navbar1 .loginbtn{
+   color: rgb(255, 255, 255);
+   border-radius: 24px;
+}
+.navbar1 .loginbtn:hover{
+
+   background-color: #0B5ED7;
+}
+@media (max-width: 952px) {
+    * {
+        position: relative;
+    }
+    .navul{
+        display: none !important;
+    }
+
+    #component {
+        display: block !important;
+    }
+}
+  .underline{
+   color: #2CD0D3;
+   border-bottom: 3px solid #2CD0D3;
+   font-size: 17px;
+   pointer-events: none;
+   list-style: none;
+   display: inline-flex;
+   margin-left: 40px;
+ }

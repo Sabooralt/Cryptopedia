@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link style="border-radius: 400px;" rel="icon" href="../images/logo.png">
+  <title>Cryptopedia | Home</title>
+  <!-- Library CDN's -->
+  <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap" rel="stylesheet">
+  <!-- Library CDN's -->
+  <!-- CSS File -->
+  <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../css/blogs.css">
+  <link rel="stylesheet" type="text/css" href="../css/navresponsive.css" />
+
+
+  <!-- CSS File -->
+  <script src="../js/jquery-3.6.1.min.js"></script>
+
+</head>
+
+<body>
+  
+  <nav class="navbar1">
+    <div class="" style="display: flex;"><a class="logo" href="../index.html">
+      <div><img src="../images/currencies/logo.png" width="70" alt=""></div>
+      <h3 id="trading" style="font-family: 'Edu TAS Beginner', cursive; font-size: 37px; margin-top: -52px; margin-left: 3%;">
+        Cryptopedia</h3>
+      </a> </div>
+      
+      
+      
+      <ul class="navul">
+        <li><a href="home.html">Home</a></li>
+        <span class="underline" > <b> Blogs </b> </span>
+        <li><a href="contactus.html">Contact us</a></li>
+      </ul>
+      <a href="../htmlpages/loginform.html">
+        <button type="button" class="btn btn-primary loginbtn">Sign up</button>
+      </a>
+      <!-- User Dropdown After login -->
+<div class="my-container d-none droppy">
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle  my-dropdown hover" type="button" id="dropdownMenu1"
+    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <img src="../images/avatar.jpg" class="circle" alt="" />
+    <span class="dropdown__item name" id="name">
+      <script> document.write(localStorage.getItem("name")) </script>
+          </span>
+          <span style="position: relative;" class="dropdown__item caret"></span>
+        </button>
+        <ul style="overflow:hidden;" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li style="pointer-events: none;"> <a style="text-align: center;" class="dropdown-item" href="#"><span
+            class="avatar"><img src="../images/avatar.jpg" alt=""></span>
+            <script> document.write(localStorage.getItem("name")) </script>
+          </a></li>
+          <div class="cus-hr"></div>
+          
+          <li onclick="logout()" class="dropdownhover"><a class="dropdown-item" href="#">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- User Dropdown After login -->
+    </nav>
+  <!-- Nav responsive structure -->
+  <div style="position: relative;" id="component" class="component">
+    <button class="cn-button" id="cn-button">+</button>
+    <div class="cn-wrapper" id="cn-wrapper">
+      <ul>
+        <li><a href="blogs.html"><span class=><img src="../images/blogsicon.png" alt=""></span></a></li>
+        <li><a href="charts.html"><span class=""><img src="../images/barcharticon.png" alt=""></span></a></li>
+        <li><a href="home.html"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="white">
+                <path
+                  d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+              </svg></span></a></li>
+        <li><a href="contactus.html"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                fill="white">
+                <path
+                  d="M256 80C149.9 80 62.4 159.4 49.6 262c9.4-3.8 19.6-6 30.4-6c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48c-44.2 0-80-35.8-80-80V384 336 288C0 146.6 114.6 32 256 32s256 114.6 256 256v48 48 16c0 44.2-35.8 80-80 80c-26.5 0-48-21.5-48-48V304c0-26.5 21.5-48 48-48c10.8 0 21 2.1 30.4 6C449.6 159.4 362.1 80 256 80z" />
+              </svg></span></a></li>
+        <li><a href="loginform.html"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white">
+                <path
+                  d="M352 96h64c17.7 0 32 14.3 32 32V384c0 17.7-14.3 32-32 32H352c-17.7 0-32 14.3-32 32s14.3 32 32 32h64c53 0 96-43 96-96V128c0-53-43-96-96-96H352c-17.7 0-32 14.3-32 32s14.3 32 32 32zm-7.5 177.4c4.8-4.5 7.5-10.8 7.5-17.4s-2.7-12.9-7.5-17.4l-144-136c-7-6.6-17.2-8.4-26-4.6s-14.5 12.5-14.5 22v72H32c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H160v72c0 9.6 5.7 18.2 14.5 22s19 2 26-4.6l144-136z" />
+              </svg></span></a></li>
+      </ul>
+    </div>
+    <div id="cn-overlay" class="cn-overlay"></div>
+  </div>
+  <!-- Nav responsive structure -->
+    <div class="container mt-5">
+      
+      <div class="col">
+        
+        <div class="content41 ">
+          
+          <h1>Coming Soon...</h1>
+          <a href="./home.html">Explore</a>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+ <!-- JavaScript Files -->
+ <script src="../Fontawesome/bootstrappopper.js"></script>
+ <script src="../bootstrap-5.2.2-dist/js/bootstrap.js"></script>
+ <script src="../Fontawesome/bootstrap.min.js"></script>
+ <script src="../Fontawesome/all.js"></script>
+ <script src="../UI-Icon-master/package.js"></script>
+ <script src="../js/main.js"></script>
+ <script src="../js/modernizr-2.6.2.min.js"></script>
+ <script src="../js/polyfills.js"></script>
+ <script src="../js/demo1.js"></script>
+
+
+ <!-- JavaScript Files -->
+  </body>
+  </html>

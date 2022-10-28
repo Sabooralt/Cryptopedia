@@ -1,0 +1,3 @@
+
+crypto section img change (looks harsh)
+table of contents ids to scroll

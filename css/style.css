@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background: #181A20;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    font-smooth: auto;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1C2331;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #2cd0d3c2;
+}
+
+
+
+/* Navbarstart */
+.navbar1{
+    position: sticky;
+    display: flex;
+     width: 100%;
+     height: 8%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     padding: 20px 4%;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+  }
+   .navbar1 .logo{
+     margin-bottom: 1%;
+   }
+   @media (max-width: 1556px){
+     #trading{
+         display: none;
+     }
+   }
+  .navbar1 .logo h3{
+    
+     margin-top: -3%;
+     position: absolute;
+     font-size: 30px;
+     font-weight: 700;
+     color: white;
+     text-decoration: none;
+     display: flex;
+     width: 18%;
+  }
+  .navbar1 .logo h3:hover{
+     color: white;
+  }
+  .navbar1 .login{
+     margin-left: 100%;
+     max-width: 60px;
+  }
+  .navbar1>ul{
+    justify-content: space-evenly;
+     margin-top: 15px;
+     margin-left: -50px;
+  
+  }
+  .navbar1>ul>li :hover{
+     -webkit-text-stroke: 0.2px #2CD0D3;
+       color: #2CD0D3;
+  }
+  
+  .navbar1>ul>li{
+     list-style: none;
+     display: inline-flex;
+     margin-left: 40px;
+  }
+  .navbar1>ul>li>a{
+     transition: 0.5s;
+     text-decoration: none;
+     color: #fff;
+     font-size: 17px;
+  }
+  .navbar1 .loginbtn{
+    color: rgb(255, 255, 255);
+    border-radius: 24px;
+  }
+  .navbar1 .loginbtn:hover{
+  
+    background-color: #0B5ED7;
+  }
+  @media (max-width: 952px) {
+    * {
+        position: relative;
+    }
+    nav{
+        display: none !important;
+    }
+
+    #component {
+        display: block !important;
+    }
+  #ticker{
+    position: relative;
+    top: 0;
+  }
+}
+    /* Navbar End */
+.logo {
+    padding-right: 3%;
+    font-size: 60px;
+}
+
+.content41 {
+    text-align: center;
+}
+
+.content41 h1 {
+    font-size: 130px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+@media(max-width:880px) {
+    .content41 h1 {
+        font-size: 80px;
+    }
+    .content41 a{
+          font-size: 18px !important;
+    } 
+
+}
+
+@media(max-width:550px) {
+    .content41 h1 {
+        font-size: 53px;
+       
+    }
+    .content41 a{
+        font-size: 10px !important;
+        padding: 10px 40px !important;
+  } 
+
+}
+@media(max-width:480px) {
+    .content41 h1 {
+         font-size: 50px;
+         
+     }
+     .content41 a{
+        font-size: 10px !important;
+        padding: 8px 30px !important;
+  } 
+
+}
+
+.content41 h1:hover {
+
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+
+.content41 a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+.content41 a:hover {
+    color: #fff;
+
+}
+.hero41 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#ticker{
+    position: absolute;
+    bottom: 0;
+    background: transparent;
+}
+
+
+
+/* Footer */
+
+#footer2 {
+    font-size: 15px;
+    padding-right: 14%;
+    text-align: left;
+    color: #fff;
+    background-color: #181A20;
+}
+
+.spacing {
+    margin-left: 4%;
+}
+
+.footercolor {
+    color: #F7631D;
+}
+
+
+.back-video {
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .back-video {
+        display: none;
+    }
+
+    body {
+        background-repeat: no-repeat;
+           background-position: center;
+         object-fit: cover;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.637),rgba(0,0,0,0.637)),url(../images/logincover1.jpg);
+
+    }
+}
+
+
+
+/* Navbar End */

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/logo.png">
+    <title>Cryptopedia | NFTS</title>
+  <!-- Library CDN's -->
+  <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap" rel="stylesheet">
+  <!-- Library CDN's -->
+ <!-- CSS File -->
+ <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap.css">
+ <link rel="stylesheet" href="../css/cryptotrading.css">
+ <link rel="stylesheet" href="../css/navresponsive.css">
+ <link rel="stylesheet" href="../Fontawesome/toc.css">
+
+ <!-- CSS File -->
+ <script src="../js/jquery-3.6.1.min.js"></script>
+
+
+</head>
+
+<body style=" background: #181A20;">
+    <nav class="navbar1">
+        <div class="" style="display: block !important;"><a class="logo" href="../index.html">
+            <div><img src="../images/currencies/logo.png" width="70" alt=""></div>
+            <h3 id="trading"
+            style="font-family: 'Edu TAS Beginner', cursive; font-size: 37px; margin-top: -56px !important; margin-left: 3%;">
+            Cryptopedia</h3>
+        </a> </div>
+
+
+
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="/htmlpages/blogs.html">Blogs</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+            </ul>
+            <a href="../htmlpages/loginform.html">
+                <button type="button" class="btn btn-primary loginbtn">Sign up</button>
+            </a>
+            <!-- User Dropdown After login -->
+<div class="my-container d-none droppy">
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle  my-dropdown hover" type="button" id="dropdownMenu1"
+      data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <img src="../images/avatar.jpg" class="circle" alt="" />
+      <span class="dropdown__item name" id="name">
+        <script> document.write(localStorage.getItem("name")) </script>
+            </span>
+            <span style="position: relative;" class="dropdown__item caret"></span>
+          </button>
+          <ul style="overflow:hidden;" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li style="pointer-events: none;"> <a style="text-align: center;" class="dropdown-item" href="#"><span
+              class="avatar"><img src="../images/avatar.jpg" alt=""></span>
+              <script> document.write(localStorage.getItem("name")) </script>
+            </a></li>
+            <div class="cus-hr"></div>
+            
+            <li onclick="logout()" class="dropdownhover"><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- User Dropdown After login -->
+
+        </nav>
+
+  <!-- Nav responsive structure -->
+  <div style="position: relative;" id="component" class="component">
+    <button class="cn-button" id="cn-button">+</button>
+    <div class="cn-wrapper" id="cn-wrapper">
+      <ul>
+        <li><a href="blogs.html"><span class=><img src="../images/blogsicon.png" alt=""></span></a></li>
+        <li><a href="charts.html"><span class=""><img src="../images/barcharticon.png" alt=""></span></a></li>
+        <li><a href="home.html"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="white">
+                <path
+                  d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+              </svg></span></a></li>
+        <li><a href="contactus.html"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                fill="white">
+                <path
+                  d="M256 80C149.9 80 62.4 159.4 49.6 262c9.4-3.8 19.6-6 30.4-6c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48c-44.2 0-80-35.8-80-80V384 336 288C0 146.6 114.6 32 256 32s256 114.6 256 256v48 48 16c0 44.2-35.8 80-80 80c-26.5 0-48-21.5-48-48V304c0-26.5 21.5-48 48-48c10.8 0 21 2.1 30.4 6C449.6 159.4 362.1 80 256 80z" />
+              </svg></span></a></li>
+        <li><a href="loginform.html"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white">
+                <path
+                  d="M352 96h64c17.7 0 32 14.3 32 32V384c0 17.7-14.3 32-32 32H352c-17.7 0-32 14.3-32 32s14.3 32 32 32h64c53 0 96-43 96-96V128c0-53-43-96-96-96H352c-17.7 0-32 14.3-32 32s14.3 32 32 32zm-7.5 177.4c4.8-4.5 7.5-10.8 7.5-17.4s-2.7-12.9-7.5-17.4l-144-136c-7-6.6-17.2-8.4-26-4.6s-14.5 12.5-14.5 22v72H32c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H160v72c0 9.6 5.7 18.2 14.5 22s19 2 26-4.6l144-136z" />
+              </svg></span></a></li>
+      </ul>
+    </div>
+    <div id="cn-overlay" class="cn-overlay"></div>
+  </div>
+  <!-- Nav responsive structure -->
+            <!-- Table of contents responsive -->
+        <div class="toc-sticky">
+            <div class="toc">
+                <h4> Table of Contents </h4>
+                <ul>
+                    <li>
+                        <a href="#whatis" id="crypto">
+                            <span id="m1">What Is a Non-Fungible Token? </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Understanding" id="understanding">
+                            <span id="m2">Understanding NFTs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#examples" id="crypto">
+                            <span id="m1">Examples</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#wnfti" id="understanding">
+                            <span id="m2">Why NFTs Are Important</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#nftrv" id="crypto">
+                            <span id="m1">NFTs in the Real and Virtual World</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#faq" id="understanding">
+                            <span id="m2">NFTs FAQs</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+            <!-- Table of contents responsive -->
+    
+    <div class="clicker">
+        <button style="color: #fff; width: 100%;" class="uk-button uk-button-default" type="button">Table Of Contents   <span style="position: relative;" class="caret21"></span></button>
+        <div class="toc-dropdown" uk-dropdown="mode:click">
+          <ol class="toc" uk-scrollspy-nav="cls: scrollspy_highlight; closest: li a; scroll: true"></ol>
+          <ul style="width: 100%">
+            <li>
+                <a href="#whatis" id="crypto">
+                    <span id="m1">What Is a Non-Fungible Token? </span>
+                </a>
+            </li>
+            <li>
+                <a href="#Understanding" id="understanding">
+                    <span id="m2">Understanding NFTs</span>
+                </a>
+            </li>
+            <li>
+                <a href="#examples" id="crypto">
+                    <span id="m1">Examples</span>
+                </a>
+            </li>
+            <li>
+                <a href="#wnfti" id="understanding">
+                    <span id="m2">Why NFTs Are Important</span>
+                </a>
+            </li>
+            <li>
+                <a href="#nftrv" id="crypto">
+                    <span id="m1">NFTs in the Real and Virtual World</span>
+                </a>
+            </li>
+            <li>
+                <a href="#faq" id="understanding">
+                    <span id="m2">NFTs FAQs</span>
+                </a>
+            </li>
+            </a>
+            <!-- <li>
+                <a href="#Safety" id="safety" >
+                   <span id="m5" > Safety</span>
+                </a>
+            </li> -->
+            <li>
+                <a href="#disadvantages" id="disadvantages">
+                    <span  id="m6"  > Advantages and Disadvantages</span>
+                </a>
+            </li>
+            <li>
+                <a href="#faqs" id="faqs">
+                    <span  id="m7"  >
+                        Cryptocurrency FAQs
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#bottom" id="bottom">
+                    <span  id="m8"  >
+                        
+                        The Bottom Line
+                    </span>
+                </a>
+            </li>
+        </ul>
+        </div>
+      </div>
+
+    <!-- Table of contents responsive -->
+
+
+        <div class="container" style="margin-top: 10% !important;">
+            <div class="content">
+
+                <div class="fadein" style="text-align: center; align-items:center">
+                        <h1 style="color: #fff; text-align: left; margin-top:10%;  ">Non-Fungible Token (NFT)</h1>
+                        <div class="cus-hr-blue"></div>
+                        </div>
+                  <br><br>
+                    <div  class="row fadein " >
+                        <div  class="col-12 col-lg-8 col-lg-9">
+                    <img style="border: none; outline:none; border-radius: 30px;" class="img-fluid"
+                        src="../images/nfts2.jpg" width="900" height="600" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-8 ">
+
+
+                        <div class="fadehidden pt-5" id="whatis">
+                            <h2>What Is a Non-Fungible Token (NFT)?</h2><br>
+                        </div>
+                        <div class="fadehidden">
+                            <p style="text-align: justify;">Non-fungible tokens (NFTs) are cryptographic assets on a
+                                blockchain with unique identification codes and metadata that distinguish them from each
+                                other.<br>
+                        </div>
+                        <div class="fadehidden">
+                            Unlike cryptocurrencies, they cannot be traded or exchanged at equivalency. This differs
+                            from fungible tokens like cryptocurrencies, which are identical to each other and,
+                            therefore, can serve as a medium for commercial transactions.</p>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <section>
+                    <div class="row ">
+                        <div class="border31 col-sm-5 col-12 col-md-6 fadehidden">
+                            <h4 style="padding: 0 0 0 9%;">KEY TAKEAWAYS</h4>
+                            <ul>
+                                <li style="margin-top: 3%; margin-left: 10%;"> NFTs (non-fungible tokens) are unique
+                                    cryptographic tokens that exist on a blockchain and cannot be replicated.
+                                </li><br>
+                                <li style="margin-left: 10%;">NFTs can represent real-world items like artwork and real
+                                    estate.
+                                </li><br>
+                                <li style="margin-left: 10%;">"Tokenizing" these real-world tangible assets makes
+                                    buying,
+                                    selling, and trading them more efficient while reducing the probability of fraud.
+                                </li><br>
+                                <li style="margin-left: 10%;">NFTs can also function to represent individuals'
+                                    identities,
+                                    property rights, and more.
+                                </li><br>
+                                <li style="margin-left: 10%;">Collectors have sought NFTs as their value initially
+                                    soared,
+                                    but has since moderated.</li>
+                            </ul> <br>
+                            <!-- <div class="border32"></div> -->
+                        </div>
+                    </div>
+                </section>
+                <div class="fadehidden pt-3" id="Understanding">
+                    <h2>Understanding Non-Fungible Tokens (NFTs)</h2> <br>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <div class="fadehidden">
+                            <p style="text-align: justify">NFTs evolved from the ERC-721 standard. Developed by some of
+                                the
+                                same people responsible for the ERC-20 smart contract, ERC-721 defines the minimum
+                                interface—ownership details, security, and metadata—required for the exchange and
+                                distribution of gaming tokens. The ERC-1155 standard takes the concept further by
+                                reducing
+                                the transaction and storage costs required for NFTs and batching multiple types of
+                                non-fungible tokens into a single contract.</p>
+                        </div>
+                        <br>
+                        <div class="fadehidden">
+                            <p style="text-align: justify">NFTs have the potential for several use cases. For example,
+                                they
+                                are an ideal vehicle to digitally represent physical assets like real estate and
+                                artwork.
+                                Because they are based on blockchains, NFTs can also work to remove intermediaries and
+                                connect artists with audiences or for identity management. NFTs can remove
+                                intermediaries,
+                                simplify transactions, and create new markets.</p> <br>
+                        </div>
+                        <div class="fadehidden">
+                            <p style="text-align: justify;">Much of the current market for NFTs is centered around
+                                collectibles, such as digital artwork, sports cards, and rarities. Perhaps the most
+                                hyped
+                                space is NBA Top Shot, a place to collect non-fungible tokenized NBA moments in digital
+                                card
+                                form. Some of these cards have sold for millions of dollars.
+                                Recently, Twitter's (TWTR) Jack Dorsey tweeted a link to a tokenized version of the
+                                first
+                                tweet ever, in which he wrote: "just setting up my twttr." The NFT version of the
+                                first-ever
+                                tweet sold for more than $2.9 million.</p><br>
+                        </div>
+                        <div class="fadehidden">
+                            <div class="border32 col-12 col-lg-8">
+                                <div style="padding: 5% 0% 0% 7%;padding-bottom: 2%; ">
+                                    <h3 style="color: rgb(0, 195, 255);">$69 Million </h3>
+                                    <p style="text-align: justify;"><i>In early March 2021, a group of NFTs by digital artist Beeple sold for over
+                                            $69
+                                            million. The sale set a precedent and a record for the most expensive pieces
+                                            of
+                                            digital art sold thus far. The artwork was a collage comprised of Beeple's
+                                            first
+                                            5,000 days of work.</i></p>
+                                </div>
+                            </div>
+                        </div><br>
+                        <div class="fadehidden">
+                            <p style="text-align: justify">Like physical money, cryptocurrencies are fungible, meaning
+                                that
+                                they can be traded or exchanged, one for another. For example, one bitcoin is always
+                                equal
+                                in value to another bitcoin. Similarly, a single unit of ether is always equal to
+                                another
+                                unit. This fungibility characteristic makes cryptocurrencies suitable as a secure medium
+                                of
+                                transaction in the digital economy.
+                                <br> <br>
+                        </div>
+                        <div class="fadehidden">
+
+                            NFTs shift the crypto paradigm by making each token unique and irreplaceable, thereby making
+                            it impossible for one non-fungible token to be equal to another. They are digital
+                            representations of assets and have been likened to digital passports because each token
+                            contains a unique, non-transferable identity to distinguish it from other tokens. They are
+                            also extensible, meaning you can combine one NFT with another to “breed” a third, unique
+                            NFT.
+
+                            </p><br></div>
+                        <div class="col-sm-10" id="light" style="border: 0.01px solid rgba(255, 255, 255, 0.479);">
+                            <div class="fadehidden">
+                                <p style="text-align: justify; padding: 20px 20px ;"><b>Important:</b>
+                                    Just like Bitcoin, NFTs also contain ownership details for easy identification and
+                                    transfer between token holders. Owners can also add metadata or attributes
+                                    pertaining to
+                                    the asset in NFTs. For example, tokens representing coffee beans can be classified
+                                    as
+                                    fair trade. Or, artists can sign their digital artwork with their own signature in
+                                    the
+                                    metadata.</p>
+                            </div>
+                        </div><br>
+                        <div class="fadehidden pt-5" id="examples">
+                            <h3>Examples of NFTs</h3>
+                        </div>
+                        <br>
+                        <div class="fadehidden">
+                            <p style="text-align: justify;">
+                                Perhaps the most famous use case for NFTs is that of cryptokitties. Launched in November
+                                2017, cryptokitties are digital representations of cats with unique identifications on
+                                Ethereum’s blockchain. Each kitty is unique and has a price in ether. They reproduce
+                                among
+                                themselves and produce new offspring, which have different attributes and valuations
+                                compared to their parents.</p> <br>
+                        </div>
+                        <div class="fadehidden">
+                            <p style="text-align: justify;">Within a few short weeks of their launch, cryptokitties
+                                racked
+                                up a fan base that spent $20 million worth of ether to purchase, feed, and nurture them.
+                                Some enthusiasts even spent upward of $100,000 on the effort.
+                                6
+                                More recently, the Bored Ape Yacht Club has garnered controversial attention for its
+                                high
+                                prices, celebrity following, and high-profile thefts of some of its 10,000 NFTs.
+                            </p> <br>
+                        </div>
+                        <div class="fadehidden">
+                            <p style="text-align: justify;">Though the cryptokitties and Bored Ape Yacht Club use cases
+                                may
+                                sound trivial, others have more serious business implications. For example, NFTs have
+                                been
+                                used in private equity transactions as well as real estate deals.
+                                9
+                                One of the implications of enabling multiple types of tokens in a contract is the
+                                ability to
+                                provide escrow for different types of NFTs—from artwork to real estate—into a single
+                                financial transaction.
+                            </p>
+                        </div>
+                        <br>
+
+                        <div class="fadehidden pt-5" id="wnfti">
+                            <h3>Why NFTs Are Important</h3> <br>
+                            <p style="text-align: justify;">
+                                Non-fungible tokens are an evolution of the relatively simple concept of
+                                cryptocurrencies.
+                                Modern finance systems consist of sophisticated trading and loan systems for different
+                                asset
+                                types, ranging from real estate to lending contracts to artwork. By enabling digital
+                                representations of physical assets, NFTs are a step forward in the reinvention of this
+                                infrastructure.</p>
+                            <br>
+                        </div>
+                        <div class="fadehidden">
+                            <p style="text-align: justify;">To be sure, the idea of digital representations of physical
+                                assets is not novel nor is the use of unique identification. However, when these
+                                concepts
+                                are combined with the benefits of a tamper-resistant blockchain of smart contracts, they
+                                become a potent force for change.
+                            </p>
+                        </div>
+                        <br>
+                        <div class="fadehidden">
+                            <p style="text-align: justify;">
+                                Perhaps, the most obvious benefit of NFTs is market efficiency. The conversion of a
+                                physical
+                                asset into a digital one streamlines processes and removes intermediaries. NFTs
+                                representing
+                                digital or physical artwork on a blockchain remove the need for agents and allow artists
+                                to
+                                connect directly with their audiences. They can also improve business processes. For
+                                example, an NFT for a wine bottle will make it easier for different actors in a supply
+                                chain
+                                to interact with it and help track its provenance, production, and sale through the
+                                entire
+                                process. Consulting firm Ernst & Young has already developed such a solution for one of
+                                its
+                                clients.
+                            </p><br>
+                        </div>
+
+                        <div class="fadehidden">
+                            <p style="text-align: justify;">Non-fungible tokens are also excellent for identity
+                                management.
+                                Consider the case of physical passports that need to be produced at every entry and exit
+                                point. By converting individual passports into NFTs, each with its own unique
+                                identifying
+                                characteristics, it is possible to streamline the entry and exit processes for
+                                jurisdictions. Expanding this use case, NFTs can serve an identity management purpose
+                                within
+                                the digital realm as well.</p> <br>
+                        </div>
+
+                        <div class="fadehidden pt-5" id="nftrv">
+                            <h3>NFTs in the Real and Virtual World</h3> <br>
+
+
+
+
+                            <p style="text-align: justify;">NFTs can also democratize investing by fractionalizing
+                                physical
+                                assets like real estate. It is much easier to divide a digital real estate asset among
+                                multiple owners than a physical one. That tokenization ethic need not be constrained to
+                                real
+                                estate; it can extend to other assets, such as artwork. Thus, a painting need not always
+                                have a single owner. Its digital equivalent can have multiple owners, each responsible
+                                for a
+                                fraction of the painting. Such arrangements could increase its worth and revenues.</p>
+                            <br>
+                        </div>
+                        <div class="fadehidden">
+                            <p style="text-align: justify;">The most exciting possibility for NFTs lies in the creation
+                                of
+                                new markets and forms of investment. Consider a piece of real estate parceled out into
+                                multiple divisions, each of which contains different characteristics and property types.
+                                One
+                                of the divisions might be next to a beach while another is in an entertainment complex,
+                                and
+                                yet another is a residential district. Depending on its characteristics, each piece of
+                                land
+                                is unique, priced differently, and represented with an NFT. Real estate trading, a
+                                complex
+                                and bureaucratic affair, can be simplified by incorporating relevant metadata into each
+                                unique NFT.</p>
+                        </div>
+                        <div class="fadehidden">
+                            <i>Decentraland, a virtual reality platform on Ethereum’s blockchain, has already
+                                implemented
+                                such a concept.
+                                As NFTs become more sophisticated and integrate into the financial infrastructure, it
+                                may
+                                become possible to implement the same concept of tokenized pieces of land (differing in
+                                value and location) in the physical world.</i>
+                        </div>
+                        <br>
+                        <div class="fadehidden pt-5" id="faq">
+
+                            <h3>What Are Some Examples of Non-Fungible Tokens?</h3> <br>
+
+
+                            <p style="text-align: justify">Non-fungible tokens can digitally represent any asset,
+                                including
+                                online-only assets like digital artwork and real assets such as real estate. Other
+                                examples
+                                of the assets that NFTs can represent include in-game items like avatars, digital and
+                                non-digital collectibles, domain names, and event tickets.</p>
+                            <br>
+                        </div>
+                        <div class="fadehidden">
+                            <h3>How Can I Buy NFTs?</h3> <br>
+                            <p style="text-align: justify">Many NFTs can only be purchased with Ether, so owning some of
+                                this cryptocurrency—and storing it in a digital wallet—is usually the first step. You
+                                can
+                                then purchase NFTs via any of the online NFT marketplaces, including OpenSea, Rarible,
+                                and
+                                SuperRare.</p>
+                        </div> <br>
+                        <div class="fadehidden">
+                            <h3>Are NFTs Safe?</h3> <br>
+                            <p style="text-align: justify">Non-fungible tokens, which use blockchain technology just
+                                like
+                                cryptocurrency, are generally secure. The distributed nature of blockchains makes NFTs
+                                difficult (although not impossible) to hack. One security risk for NFTs is that you
+                                could
+                                lose access to your non-fungible token if the platform hosting the NFT goes out of
+                                business.
+                            </p>
+                        </div>
+                        <br>
+                        <div class="fadehidden">
+                            <h3>What Does Non-Fungible Mean?</h3><br>
+                            <p style="text-align: justify">Fungibility is an economics term that describes the
+                                interchangeability of certain goods. For example, a barrel of oil is fungible
+                                (interchangeable/indistinguishable) from any other barrel of oil. A dollar bill,
+                                likewise,
+                                is equal to any other dollar bill (or 4 quarters, etc.). Non-fungible is to render such
+                                items unique or distinguishable. For instance, if you were to take a dollar bill and
+                                have it
+                                drawn on and signed by a famous artist, it become unique - unlike all other dollar
+                                bills,
+                                and perhaps worth more than its face value.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer id="icons" class="page-footer font-small" style="background-color: #1c2331; margin-top: 10%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 py-5">
+                        <div class="mb-5" style="justify-content: space-between;">
+                            <a class="fb-ic lol" href="https://www.facebook.com/profile.php?id=100053190711596">
+                                <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <a class="tw-ic lol" href="https://twitter.com/saboor_x">
+                                <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <a class="ins-ic lol" href="https://www.instagram.com/saboorahmed26/">
+                                <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hrr container">
+                <hr>
+            </div>
+            <h3 style="color: #fff; font-family: 'Edu TAS Beginner', cursive; font-weight: 600; text-align: center;">
+                Cryptopedia</h3>
+            <div class="footer-copyright text-center py-3 lol2">© 2022 Copyright:
+                <a style="pointer-events: none;" > Saboor</a>
+            </div>
+        </footer>
+        <!-- End -->
+
+
+  <!-- JavaScript Files -->
+  <script src="../Fontawesome/toc.js"></script>
+  <script src="../Fontawesome/bootstrappopper.js"></script>
+  <script src="../bootstrap-5.2.2-dist/js/bootstrap.js"></script>
+  <script src="../Fontawesome/bootstrap.min.js"></script>
+  <script src="../Fontawesome/all.js"></script>
+  <script src="../UI-Icon-master/package.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/modernizr-2.6.2.min.js"></script>
+  <script src="../js/polyfills.js"></script>
+  <script src="../js/demo1.js"></script>
+
+
+  <!-- JavaScript Files -->
+
+</body>
+
+</html>

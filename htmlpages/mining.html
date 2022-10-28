@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/logo.png">
+    <title>Cryptopedia | Mining </title>
+   <!-- Library CDN's -->
+   <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap" rel="stylesheet">
+   <!-- Library CDN's -->
+<!-- CSS File -->
+<link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap.css">
+<link rel="stylesheet" href="../css/cryptotrading.css">
+<link rel="stylesheet" href="../css/navresponsive.css">
+<link rel="stylesheet" href="../Fontawesome/toc.css">
+
+
+<!-- CSS File -->
+<script src="../js/jquery-3.6.1.min.js"></script>
+
+</head>
+
+
+<body style=" background: #181A20;">
+    <div class="banner1">
+        <nav class="navbar1">
+            <div class="" style="display: block !important;"><a class="logo" href="../index.html">
+                <div><img src="../images/currencies/logo.png" width="70" alt=""></div>
+                <h3 id="trading"
+                style="font-family: 'Edu TAS Beginner', cursive; font-size: 37px; margin-top: -56px !important; margin-left: 3%;">
+                Cryptopedia</h3>
+            </a> </div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="/htmlpages/blogs.html">Blogs</a></li>
+                <li><a href="contactus.html">About us</a></li>
+            </ul>
+            <a href="../htmlpages/loginform.html">
+                <button type="button" class="btn btn-primary loginbtn">Sign up</button>
+            </a>
+            <!-- User Dropdown After login -->
+<div class="my-container d-none droppy">
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle  my-dropdown hover" type="button" id="dropdownMenu1"
+      data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <img src="../images/avatar.jpg" class="circle" alt="" />
+      <span class="dropdown__item name" id="name">
+        <script> document.write(localStorage.getItem("name")) </script>
+            </span>
+            <span style="position: relative;" class="dropdown__item caret"></span>
+          </button>
+          <ul style="overflow:hidden;" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li style="pointer-events: none;"> <a style="text-align: center;" class="dropdown-item" href="#"><span
+              class="avatar"><img src="../images/avatar.jpg" alt=""></span>
+              <script> document.write(localStorage.getItem("name")) </script>
+            </a></li>
+            <div class="cus-hr"></div>
+            
+            <li onclick="logout()" class="dropdownhover"><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- User Dropdown After login -->
+        </nav>
+
+       <!-- Nav responsive structure -->
+  <div style="position: relative;" id="component" class="component">
+    <button class="cn-button" id="cn-button">+</button>
+    <div class="cn-wrapper" id="cn-wrapper">
+      <ul>
+        <li><a href="blogs.html"><span class=><img src="../images/blogsicon.png" alt=""></span></a></li>
+        <li><a href="charts.html"><span class=""><img src="../images/barcharticon.png" alt=""></span></a></li>
+        <li><a href="home.html"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="white">
+                <path
+                  d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+              </svg></span></a></li>
+        <li><a href="contactus.html"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                fill="white">
+                <path
+                  d="M256 80C149.9 80 62.4 159.4 49.6 262c9.4-3.8 19.6-6 30.4-6c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48c-44.2 0-80-35.8-80-80V384 336 288C0 146.6 114.6 32 256 32s256 114.6 256 256v48 48 16c0 44.2-35.8 80-80 80c-26.5 0-48-21.5-48-48V304c0-26.5 21.5-48 48-48c10.8 0 21 2.1 30.4 6C449.6 159.4 362.1 80 256 80z" />
+              </svg></span></a></li>
+        <li><a href="loginform.html"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="white">
+                <path
+                  d="M352 96h64c17.7 0 32 14.3 32 32V384c0 17.7-14.3 32-32 32H352c-17.7 0-32 14.3-32 32s14.3 32 32 32h64c53 0 96-43 96-96V128c0-53-43-96-96-96H352c-17.7 0-32 14.3-32 32s14.3 32 32 32zm-7.5 177.4c4.8-4.5 7.5-10.8 7.5-17.4s-2.7-12.9-7.5-17.4l-144-136c-7-6.6-17.2-8.4-26-4.6s-14.5 12.5-14.5 22v72H32c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H160v72c0 9.6 5.7 18.2 14.5 22s19 2 26-4.6l144-136z" />
+              </svg></span></a></li>
+      </ul>
+    </div>
+    <div id="cn-overlay" class="cn-overlay"></div>
+  </div>
+  <!-- Nav responsive structure -->
+
+        <div class="toc-sticky">
+            <div class="toc">
+                <h4> Table of Contents </h4>
+                <ul>
+                    <li>
+                        <a href="#whatis" id="crypto">
+                            <span id="m1">What is Cryptocurrency?</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Understanding" id="understanding">
+                            <span id="m2">Understanding Cryptocurrency</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Types" id="types">
+                            <span id="m3"  > Types </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Legality" id="legality">
+                            <span id="m4" > Legality </span>
+                    </li>
+                    </a>
+                    <!-- <li>
+                        <a href="#Safety" id="safety" >
+                           <span id="m5" > Safety</span>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="#disadvantages" id="disadvantages">
+                            <span  id="m6"  > Advantages and Disadvantages</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#faqs" id="faqs">
+                            <span  id="m7"  >
+                                Cryptocurrency FAQs
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#bottom" id="bottom">
+                            <span  id="m8"  >
+                                
+                                The Bottom Line
+                            </span>
+                        </a>
+                    </li>
+            </div>
+        </div>
+    
+
+
+        <div class="container" style="margin-top: 10% !important;">
+            <div class="content">
+                <div class="fadein" style="text-align: center; align-items:center">
+                    <h1 style="color: #fff; text-align: left; margin-top:10%;  ">How Does Bitcoin Mining Work?</h1>
+
+                    <div class="cus-hr-blue"></div>
+                </div><br><br>
+                <div  class="row fadein " >
+                    <div  class="col-md-11">
+
+                <img style="border: none; outline:none; border-radius: 30px;" class="img-fluid"
+                    src="../images/mining.jpg" width="900" height="600" alt="">
+
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-12 col-lg-8 col-lg-9">
+
+
+                        <div id="whatis" class="fadehidden pt-5">
+                            <h2>What Is Bitcoin Mining?</h2><br>
+                        </div>
+                        <div class="fadehidden">
+                            <p style="text-align: justify;">Bitcoin mining is the process by which new bitcoins are
+                                entered into circulation. It is also the way the network confirms new transactions and
+                                is a critical component of the blockchain ledger's maintenance and development. "Mining"
+                                is performed using sophisticated hardware that solves an extremely complex computational
+                                math problem. The first computer to find the solution to the problem receives the next
+                                block of bitcoins and the process begins again.
+                        </div><br>
+                        <div class="fadehidden">
+                            Cryptocurrency mining is painstaking, costly, and only sporadically rewarding. Nonetheless,
+                            mining has a magnetic appeal for many investors who are interested in cryptocurrency because
+                            of the fact that miners receive rewards for their work with crypto tokens. This may be
+                            because entrepreneurial types see mining as pennies from heaven, like California gold
+                            prospectors in 1849. And if you are technologically inclined, why not do it?</p>
+                        </div><br>
+                        <div class="fadehidden">
+                            The bitcoin reward that miners receive is an incentive that motivates people to assist in
+                            the primary purpose of mining: to legitimize and monitor Bitcoin transactions, ensuring
+                            their validity. Because many users all over the world share these responsibilities, Bitcoin
+                            is a "decentralized" cryptocurrency, or one that does not rely on any central authority like
+                            a central bank or government to oversee its regulation.
+                        </div>
+
+                        <div class="fadehidden">However, before you invest the time and equipment, read this explainer to see
+                            whether mining is really for you.</div>
+                    </div>
+                </div>
+                <br><br>
+                <section>
+                    <div class="row ">
+                        <div class="border31 col-sm-5 col-12 col-md-6 fadehidden">
+                            <h4 style="padding: 0 0 0 9%;">KEY TAKEAWAYS</h4>
+                            <ul>
+                                <li class="fadehidden" style="margin-top: 3%; margin-left: 10%;"> By mining, you can earn
+                                    cryptocurrency without having to put down money for it.
+                                </li>
+                                <li class="fadehidden" style="margin-left: 10%;">NBitcoin miners receive bitcoin as a reward
+                                    for completing
+                                    "blocks" of verified transactions, which are added to the blockchain.
+                                </li>
+                                <li class="fadehidden" style="margin-left: 10%;">Mining rewards are paid to the miner who
+                                    discovers a
+                                    solution to a complex hashing puzzle first, and the probability that a participant
+                                    will be the one to discover the solution is related to the portion of the network's
+                                    total mining power.
+                                </li>
+                                <li class="fadehidden" style="margin-left: 10%;">You need either a graphics processing unit
+                                    (GPU) or an application-specific integrated circuit (ASIC) in order to set up a
+                                    mining rig.
+                                </li>
+                            </ul> <br>
+
+                        </div>
+                    </div>
+                </section>
+                <br>
+
+                <div class="col-12 col-lg-8 col-lg-9" id="light" style="border: 0.01px solid rgba(255, 255, 255, 0.479);">
+                    <div class="fadehidden">
+                        <p style="text-align: justify; padding: 20px 20px ;"><b>TIP:</b>
+                            Throughout, we use "Bitcoin" with a capital "B" when referring to the network or the
+                            cryptocurrency as a concept, and "bitcoin" with a small "b" when we're referring to a
+                            quantity of individual tokens.</p>
+                    </div>
+                </div>
+                <div id="why" class="fadehidden pt-1">
+                    <h2>Why Bitcoin Needs Miners</h2> <br>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-8 col-lg-9">
+                        <div class="fadehidden">
+                            <p style="text-align: justify">Blockchain "mining" is a metaphor for the computational work
+                                that nodes in the network undertake in hopes of earning new tokens. In reality, miners
+                                are essentially getting paid for their work as auditors. They are doing the work of
+                                verifying the legitimacy of Bitcoin transactions. This convention is meant to keep
+                                Bitcoin users honest and was conceived by Bitcoin's founder, Satoshi Nakamoto.
+                                By verifying transactions, miners are helping to prevent the "double-spending problem."
+                            </p>
+                        </div>
+                        <br>
+                        <div class="fadehidden">
+                            <p style="text-align: justify">Double spending is a scenario in which a Bitcoin owner
+                                illicitly spends the same bitcoin twice. With physical currency, this isn't an issue:
+                                When you hand someone a $20 bill to buy a bottle of vodka, you no longer have it, so
+                                there's no danger you could use that same $20 bill to buy lotto tickets next door.
+                                Though counterfeit cash is possible, it is not exactly the same as literally spending
+                                the same dollar twice. With digital currency, however, as the Investopedia dictionary
+                                explains, "there is a risk that the holder could make a copy of the digital token and
+                                send it to a merchant or another party while retaining the original."</p> <br>
+                        </div>
+                        <div class="fadehidden">
+                            <p style="text-align: justify;">Let's say you had one legitimate $20 bill and one
+                                counterfeit of that same $20. If you were to try to spend both the real bill and the
+                                fake one, someone who took the trouble of looking at both of the bills' serial numbers
+                                would see that they were the same number, and thus one of them had to be false. What a
+                                blockchain miner does is analogous to that—they check transactions to make sure that
+                                users have not illegitimately tried to spend the same bitcoin twice. This isn't a
+                                perfect analogy—we'll explain in more detail below.</p><br>
+                        </div>
+                        <div class="col-12 col-lg-8 col-lg-9" id="light" style="border: 0.01px solid rgba(255, 255, 255, 0.479);">
+                            <div class="fadehidden">
+                                <p style="text-align: justify; padding: 20px 20px ;"><b>Important:</b>
+                                    Only 1 megabyte of transaction data can fit into a single bitcoin block. The 1MB
+                                    limit was set by Satoshi Nakamoto, and this has become a matter of controversy
+                                    because some miners believe the block size should increase to accommodate more data,
+                                    which would effectively mean that the Bitcoin network could process and verify
+                                    transactions more quickly.</p>
+                            </div>
+                        </div>
+                        <div id="whybtc" class="fadehidden pad">
+                            <h3>Why Mine Bitcoin?</h3><br>
+                            <p style="text-align: justify">In addition to lining the pockets of miners and supporting
+                                the Bitcoin ecosystem, mining serves another vital purpose: It is the only way to
+                                release new cryptocurrency into circulation. In other words, miners are basically
+                                "minting" currency. For example, as of March 2022, there were just under 19 million
+                                bitcoins in circulation, out of a total of 21 million.
+                        </div>
+                        <br>
+                        <div class="fadehidden">
+                            To earn new bitcoins, you need to be the first miner to arrive at the right answer, or
+                            closest answer, to a numeric problem. This process is also known as proof of work (PoW). To
+                            begin mining is to start engaging in this proof-of-work activity to find the answer to the
+                            puzzle.
+
+                            <br>
+                        </div>
+                        <div class="fadehidden">No advanced math or computation is really involved. You may have heard that
+                            miners are solving difficult mathematical problems—that's true but not because the math
+                            itself is hard. What they're actually doing is trying to be the first miner to come up with
+                            a 64-digit hexadecimal number (a "hash") that is less than or equal to the target hash. It's
+                            basically guesswork.</div><br>
+                        <div class="fadehidden">
+                            So it is a matter of randomness, but with the total number of possible guesses for each of
+                            these problems numbering in the trillions, it's incredibly arduous work. And the number of
+                            possible solutions (referred to as the level of mining difficulty) only increases with each
+                            miner that joins the mining network. In order to solve a problem first, miners need a lot of
+                            computing power. To mine successfully, you need to have a high "hash rate," which is
+                            measured in terms gigahashes per second (GH/s) and terahashes per second (TH/s).
+                        </div><br>
+                        <div style="text-align: justify;" class="fadehidden">Aside from the short-term payoff of newly minted
+                            bitcoins, being a coin miner
+                            can also give you "voting" power when changes are proposed in the Bitcoin network protocol.
+                            This is known as a Bitcoin Improvement Protocol (BIP). In other words, miners have some
+                            degree of influence on the decision-making process for matters such as forking. The more
+                            hash power you possess, the more votes you have to cast for such initiatives.</div><br>
+
+
+                        <div id="howmuch" class="fadehidden pad">
+                            <h3>How Much a Miner Earns</h3> <br>
+                            <p>The rewards for Bitcoin mining are reduced by half roughly every four years.
+                                When bitcoin was first mined in 2009, mining one block would earn you 50 BTC. In 2012,
+                                this was halved to 25 BTC. By 2016, this was halved again to 12.5 BTC. On May 11, 2020,
+                                the reward halved again to 6.25 BTC.</p>
+                        </div>
+                        <div class="fadehidden"> <br>
+                            <img class="img-thumbnail" src="../images/info1.webp" alt="">
+                            <p style="font-size: xx-small;"> Image by Sabrina Jiang Â© Investopedia 2021</p>
+                        </div> <br><br><br>
+                        <div class="fadehidden">As of March 2022, the price of Bitcoin was around $39,000 per bitcoin, which
+                            means you'd have earned $243,750 (6.25 x 39,000) for completing a block.
+                            Not a bad incentive to solve that complex hash problem detailed above, it might seem.</div>
+                        <br>
+                        <div class="fadehidden">To keep track of precisely when these halvings will occur, you can consult the
+                            Bitcoin Clock, which updates this information in real time. Interestingly, the market price
+                            of Bitcoin has, throughout its history, tended to correspond closely to the reduction of new
+                            coins entered into circulation. This lowering inflation rate increased scarcity and,
+                            historically, the price has risen with it.</div><br><br>
+
+
+                        <div class="col-12 col-lg-8 col-lg-9" id="light" style="border: 0.01px solid rgba(255, 255, 255, 0.479);">
+                            <div class="fadehidden">
+                                <p style="text-align: justify; padding: 20px 20px ;"><b>TIP:</b>
+                                    If you want to estimate how much bitcoin you could mine with your mining rig's hash
+                                    rate, the site CryptoCompare offers a helpful calculator. Other web resources offer
+                                    similar tools.</p>
+                            </div>
+                        </div><br><br>
+                        <div class="fadehidden pt-5" id="whyneed">
+                            <h3>What You Need to Mine Bitcoins</h3> <br>
+                            <p class="fadehidden">
+                                Although individuals were able to compete for blocks with a regular at-home personal
+                                computer early on in Bitcoin's history, this is no longer the case. The reason for this
+                                is that the difficulty of mining Bitcoin changes over time.
+                            </p>
+                        </div><br>
+                        <div class="fadehidden">In order to ensure the blockchain functions smoothly and can process and
+                            verify transactions, the Bitcoin network aims to have one block produced every 10 minutes or
+                            so. However, if there are 1 million mining rigs competing to solve the hash problem, they'll
+                            likely reach a solution faster than a scenario in which 10 mining rigs are working on the
+                            same problem. For that reason, Bitcoin is designed to evaluate and adjust the difficulty of
+                            mining every 2,016 blocks, or roughly every two weeks.</div> <br>
+
+                        <div class="fadehidden">
+                            When there is more computing power collectively working to mine for bitcoins, the difficulty
+                            level of mining increases in order to keep block production at a stable rate. Less computing
+                            power means the difficulty level decreases. At today's network size, a personal computer
+                            mining for bitcoin will almost certainly find nothing.
+                        </div><br><br>
+                        <div class="fadehidden">
+                            <h3>Mining hardware</h3><br>
+                            <p class="fadehidden">All of this is to say that, in order to mine competitively, miners must now
+                                invest in
+                                powerful computer equipment like a graphics processing unit (GPU) or, more
+                                realistically, an application-specific integrated circuit (ASIC). These can run from
+                                $500 into the tens of thousands of dollars. Some miners—particularly Ethereum miners—buy
+                                individual graphics cards as a low-cost way to cobble together mining operations.</p>
+                        </div><br>
+                        <div class="fadehidden">Today, Bitcoin mining hardware is almost entirely made up of ASIC machines,
+                            which in this case, specifically do one thing and one thing only: Mine for bitcoins. Today's
+                            ASICs are many orders of magnitude more powerful than CPUs or GPUs and gain both more
+                            hashing power and energy efficiency every few months as new chips are developed and
+                            deployed. Today's miners can produce almost 200 TH/s at only 27.5 joules per terahash.</div>
+                        <br>
+
+
+
+                        <div class="fadehidden">
+                            <h3>An analogy</h3><br>
+                            <p class="fadehidden">Say I tell three friends that I'm thinking of a number between one and 100,
+                                and I write
+                                that number on a piece of paper and seal it in an envelope. My friends don't have to
+                                guess the exact number; they just have to be the first person to guess any number that
+                                is less than or equal to it. And there is no limit to how many guesses they get.</p>
+                        </div><br>
+                        <div class="fadehidden">
+                            Let's say I'm thinking of the number 19. If Friend A guesses 21, they lose because 21 > 19.
+                            If Friend B guesses 16 and Friend C guesses 12, then they've both theoretically arrived at
+                            viable answers because of 16 < 19 and 12 < 19. There is no "extra credit" for Friend B, even
+                                though B's answer was closer to the target answer of 19. Now imagine that I pose
+                                the "guess what number I'm thinking of" question, but I'm not asking just three friends,
+                                and I'm not thinking of a number between 1 and 100. Rather, I'm asking millions of
+                                would-be miners, and I'm thinking of a 64-digit hexadecimal number. Now you see that
+                                it's going to be extremely hard to guess the right answer. If B and C both answer
+                                simultaneously, then the system breaks down. </div><br>
+                                <div class="fadehidden">In Bitcoin terms, simultaneous answers occur frequently, but at the
+                                    end of the day, there can only be one winning answer. When multiple simultaneous
+                                    answers are presented that are equal to or less than the target number, the Bitcoin
+                                    network will decide by a simple majority—51%—which miner to honor.</div><br>
+                                <div class="fadehidden">
+                                    Typically, it is the miner who has done the most work or, in other words, the one
+                                    that verifies the most transactions. The losing block then becomes an "orphan
+                                    block." Orphan blocks are those that are not added to the blockchain. Miners who
+                                    successfully solve the hash problem but haven't verified the most transactions are
+                                    not rewarded with bitcoin.
+                                </div>
+                                <div style="top: 0;" class="fadehidden pt-5" id="tmp">
+                                    <h2>The Mining Process</h2>
+                                    <h4 style="top: 0;">What Is a '64-Digit Hexadecimal Number'?</h4>
+                                    <p class="fadehidden"> Here is an example of such a number:</p><br>
+                                    <p style="text-align: end;">
+                                        <i>0000000000000000057fcc708cf0130d95e27c5819203e9f967ac56e4df598ee</i>
+                                    </p>
+                                </div><br>
+                                <div class="fadehidden">
+                                    The number above has 64 digits. Easy enough to understand so far. As you probably
+                                    noticed, that number consists not just of numbers, but also letters of the alphabet.
+                                    Why is that?
+                                </div><br>
+                                <div class="fadehidden">To understand what these letters are doing in the middle of numbers,
+                                    let's unpack the word "hexadecimal."</div>
+                                <div class="fadehidden">The decimal system uses factors of 100 as its base (e.g., 1% = 0.01).
+                                    This, in turn, means that every digit of a multi-digit number has 100 possibilities,
+                                    zero through 99. In computing, the decimal system is simplified to base 10, or zero
+                                    through nine.</div><br>
+                                <div class="fadehidden">"Hexadecimal," on the other hand, means base 16 because "hex" is
+                                    derived from the Greek word for six, and "deca" is derived from the Greek word for
+                                    10. In a hexadecimal system, each digit has 16 possibilities. But our numeric system
+                                    only offers 10 ways of representing numbers (zero through nine). That's why you have
+                                    to add letters, specifically, letters A, B, C, D, E, and F. </div><br>
+                                <div class="fadehidden">If you are mining Bitcoin, you do not need to calculate the total
+                                    value of that 64-digit number (the hash). I repeat: You do not need to calculate the
+                                    total value of a hash.
+
+                                </div><br>
+
+                                <div class="fadehidden">
+                                    <img class="img-thumbnail" src="../images/info2.webp" alt="">
+                                    <p style="font-size: xx-small;"> Image by Sabrina Jiang Â© Investopedia 2021</p>
+                                </div><br>
+                                <div class="fadehidden">
+                                    <h3> What do '64-digit hexadecimal numbers' have to do with Bitcoin mining?</h3>
+                                    <br>
+                                    <p class="fadehidden">Remember that analogy, in which the number 19 was written on a piece
+                                        of paper and
+                                        put in a sealed envelope? In Bitcoin mining terms, that metaphorical undisclosed
+                                        number in the envelope is called the target hash.</p>
+                                </div>
+                                <div class="fadehidden">What miners are doing with those huge computers and dozens of cooling
+                                    fans is guessing at the target hash. Miners make these guesses by randomly
+                                    generating as many "nonces" as possible, as quickly as possible. A nonce is short
+                                    for "number only used once," and the nonce is the key to generating these 64-bit
+                                    hexadecimal numbers I keep mentioning. In Bitcoin mining, a nonce is 32 bits in
+                                    size—much smaller than the hash, which is 256 bits. The first miner whose nonce
+                                    generates a hash that is less than or equal to the target hash is awarded credit for
+                                    completing that block and is awarded the spoils of 6.25 BTC.</div>
+                                <br>
+                                <div class="fadehidden">
+                                    In theory, you could achieve the same goal by rolling a 16-sided die 64 times to
+                                    arrive at random numbers, but why on Earth would you want to do that?
+                                </div>
+                                <br>
+                                <div class="fadehidden">The screenshot below, taken from the site Blockchain.info, might help
+                                    you put all this information together at a glance. You are looking at a summary of
+                                    everything that happened when block No.490163 was mined. The nonce that generated
+                                    the "winning" hash was 731511405. The target hash is shown on top. The term "Relayed
+                                    by AntPool" refers to the fact that this particular block was completed by AntPool,
+                                    one of the more successful mining pools (more about mining pools below).</div>
+                                <br>
+                                <div class="fadehidden">As you see here, their contribution to the Bitcoin community is that
+                                    they confirmed 1,768 transactions for this block. If you really want to see all
+                                    1,768 of those transactions for this block, go to this page and scroll down to the
+                                    Transactions section.</div>
+                                <div class="fadehidden">
+                                    <img class="img-thumbnail" height="400px" src="../images/info3.webp" alt="">
+                                    <p style="font-size: xx-small;"> Source: Blockchain.info</p>
+                                </div><br>
+                                <div class="fadehidden">
+                                    <h4>How do I guess at the target hash?</h4><br>
+                                    <p class="fadehidden">All target hashes begin with a string of leading zeroes. There is no
+                                        minimum
+                                        target, but there is a maximum target set by the Bitcoin Protocol. No target can
+                                        be greater than this number: </p>
+                                </div> <br>
+                                <div class="fadehidden">
+                                    <p style="text-align: end;">
+                                        00000000ffff0000000000000000000000000000000000000000000000000000</p><br>
+                                    <p class="fadehidden">The winning hash for a bitcoin miner is one that has at least the
+                                        minimum number of leading zeroes defined by the mining difficulty.</p><br>
+                                    <p class="fadehidden">Here are some examples of randomized hashes and the criteria for
+                                        whether they will lead to success for the miner:</p>
+                                </div>
+                                <br>
+                                <div class="fadehidden">
+                                    <img class="img-thumbnail" height="400px" src="../images/info5.webp" alt="">
+                                </div>
+                                <div class="fadehidden">
+                                    <p style="font-size: xx-small; text-align: justify;"> Note: These are made-up
+                                        hashes.
+                                        Image by Sabrina Jiang Â© Investopedia 2021</p> <br>
+                                    <p style="text-align: justify;">To find such a hash value, you have to get a fast
+                                        mining rig, or, more
+                                        realistically,
+                                        join a mining pool—a group of coin miners who combine their computing power and
+                                        split the mined Bitcoin. Mining pools are comparable to Powerball clubs whose
+                                        members buy lottery tickets en masse and agree to share any winnings. A
+                                        disproportionately large number of blocks are mined by pools rather than by
+                                        individual miners.</p><br>
+                                    <p style="text-align: justify;">In other words, it's literally just a numbers game.
+                                        You cannot guess the pattern
+                                        or
+                                        make a prediction based on previous target hashes. At today's difficulty levels,
+                                        the
+                                        odds of finding the winning value for a single hash is one in the tens of
+                                        trillions.
+
+                                        Not great odds if you're working on your own, even with a tremendously powerful
+                                        mining rig.</p>
+                                </div> <br>
+                                <div class="fadehidden">
+                                    <p style="text-align: justify;">Not only do miners have to factor in the costs
+                                        associated with expensive
+                                        equipment
+                                        necessary to stand a chance of solving a hash problem, but they must also
+                                        consider
+                                        the significant amount of electrical power mining rigs utilize in generating
+                                        vast
+                                        quantities of nonces in search of the solution. All told, Bitcoin mining is
+                                        largely
+                                        unprofitable for most individual miners as of this writing. The site
+                                        CryptoCompare
+                                        offers a helpful calculator that allows you to plug in numbers such as your hash
+                                        speed and electricity costs to estimate the costs and benefits.</p>
+                                </div> <br>
+                                <div class="fadehidden">
+
+                                    <img class="img-thumbnail" height="400px" src="../images/info6.webp" alt="">
+                                    <p style="font-size: xx-small; text-align: justify;"> Source: CryptoCompare</p>
+                                </div>
+                                <div class="fadehidden pt-5" id="wamp">
+                                    <h2>What Are Mining Pools?</h2>
+                                    <p class="">The miner who discovers a solution to the puzzle first receives the
+                                        mining
+                                        rewards, and the probability that a participant will be the one to discover the
+                                        solution is equal to the proportion of the total mining power on the network.
+                                    </p><br>
+                                </div>
+                                <div class="fadehidden">
+                                    <p style="text-align: justify;">Participants with a small percentage of the mining
+                                        power stand a very small
+                                        chance of discovering the next block on their own. For instance, a mining card
+                                        that one could purchase for a couple of thousand dollars would represent less
+                                        than 0.001% of the network's mining power. With such a small chance at finding
+                                        the next block, it could be a long time before that miner finds a block, and the
+                                        difficulty going up makes things even worse. The miner may never recoup their
+                                        investment. The answer to this problem is mining pools. </p><br>
+                                    <p style="text-align: justify;">Mining pools are operated by third parties and
+                                        coordinate groups of miners. By
+                                        working together in a pool and sharing the payouts among all participants,
+                                        miners can get a steady flow of bitcoin starting the day they activate their
+                                        miners. Statistics on some of the mining pools can be seen on Blockchain.info.
+                                    </p>
+                                </div>
+                                <div class="fadehidden pt-5" id="psb">
+                                    <h2>A Pickaxe Strategy for Bitcoin Mining
+                                    </h2>
+                                    <p style="text-align: justify;">As mentioned above, the easiest way to acquire
+                                        Bitcoin is to simply buy it on one
+                                        of the many Bitcoin exchanges. Alternately, you can always leverage the "pickaxe
+                                        strategy." This is based on the old saw that during the 1849 California Gold
+                                        Rush, the smart investment was not to pan for gold, but rather to make the
+                                        pickaxes used for mining.
+                                    </p>
+                                </div><br>
+                                <div class="fadehidden">
+                                    <p style="text-align: justify;">To put it in modern terms, invest in the companies
+                                        that manufacture those
+                                        pickaxes. In a cryptocurrency context, the pickaxe equivalent would be a company
+                                        that manufactures equipment used for Bitcoin mining. You may consider looking
+                                        into companies that make ASIC equipment or GPUs instead, for example.</p>
+                                </div>
+                                <div class="fadehidden pt-5" id="dom">
+                                    <h2>Downsides of Mining </h2>
+                                    <p style="text-align: justify;">The risks of mining are often financial and
+                                        regulatory. As aforementioned,
+                                        Bitcoin mining, and mining in general, is a financial risk because one could go
+                                        through all the effort of purchasing hundreds or thousands of dollars worth of
+                                        mining equipment only to have no return on their investment. That said, this
+                                        risk can be mitigated by joining mining pools. If you are considering mining and
+                                        live in an area where it is prohibited, you should reconsider. It may also be a
+                                        good idea to research your country's regulation and overall sentiment toward
+                                        cryptocurrency before investing in mining equipment.</p>
+                                </div> <br>
+                                <div class="fadehidden">
+                                    <p style="text-align: justify;">One additional potential risk from the growth of
+                                        Bitcoin mining (and other PoW
+                                        systems as well) is the increasing energy usage required by the computer systems
+                                        running the mining algorithms. Though microchip efficiency has increased
+                                        dramatically for ASIC chips, the growth of the network itself is outpacing
+                                        technological progress. As a result, there are concerns about Bitcoin mining's
+                                        environmental impact and carbon footprint.</p>
+                                </div> <br><br>
+
+                                <div class="fadehidden">
+
+                                    <iframe title="Bitcoin Energy Consumption" aria-label="Column Chart"
+                                        id="datawrapper-chart-NDCZf" src="https://datawrapper.dwcdn.net/NDCZf/7/"
+                                        scrolling="no" frameborder="0"
+                                        style="width: 0; min-width: 100% !important; border: none; background-color: rgb(255, 255, 255);"
+                                        height="400"></iframe>
+                                    <script
+                                        type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (e) { if (void 0 !== e.data["datawrapper-height"]) { var t = document.querySelectorAll("iframe"); for (var a in e.data["datawrapper-height"]) for (var r = 0; r < t.length; r++) { if (t[r].contentWindow === e.source) t[r].style.height = e.data["datawrapper-height"][a] + "px" } } })) }();</script>
+                                </div><br>
+                                <div class="fadehidden">
+                                    <p style="text-align: justify;">There are, however, efforts to mitigate this
+                                        negative externality by seeking
+                                        cleaner and green energy sources for mining operations (such as geothermal or
+                                        solar sources), as well as utilizing carbon offset credits. Switching to less
+                                        energy-intensive consensus mechanisms like proof-of-stake (PoS), which Ethereum
+                                        has transitioned to, is another strategy; however, PoS comes with its own set of
+                                        drawbacks and inefficiencies, such as incentivizing hoarding instead of using
+                                        coins and a risk of centralization of consensus control.</p>
+                                </div>
+                                <div class="fadehidden">
+                                    <div class="col-12 col-lg-8 col-lg-9" id="light"
+                                        style="border: 0.01px solid rgba(255, 255, 255, 0.479);">
+                                        <div class="fadehidden">
+                                            <p style="text-align: justify; padding: 20px 20px ;"><b>Important:</b>
+                                                Mining is a metaphor for introducing new bitcoins into the system
+                                                because it requires (computational) work just as mining for gold or
+                                                silver requires (physical) effort. Of course, the tokens that miners
+                                                find are virtual and exist only within the digital ledger of the Bitcoin
+                                                blockchain.</p>
+                                        </div>
+                                    </div>
+                                </div><br>
+                                <div class="fadehidden pt-5" id="faqs">
+                                    <h3>Why Do Bitcoins Need to Be Mined?</h3>
+                                    <p style="text-align: justify;">Because they are entirely digital records, there is
+                                        a risk of copying,
+                                        counterfeiting, or double-spending the same coin more than once. Mining solves
+                                        these problems by making it extremely expensive and resource-intensive to try to
+                                        do one of these things or otherwise "hack" the network. Indeed, it is far more
+                                        cost-effective to join the network as a miner than to try to undermine it.</p>
+                                </div><br>
+                                <div class="fadehidden">
+                                    <h3>How Does Mining Confirm Transactions?</h3>
+                                    <p style="text-align: justify;">In addition to introducing new BTC into circulation,
+                                        mining serves the crucial
+                                        role of confirming and validating new transactions on the Bitcoin blockchain.
+                                        This is important because there is no central authority such as a bank, court,
+                                        government, or anything else determining which transactions are valid and which
+                                        are not. Instead, the mining process achieves a decentralized consensus through
+                                        proof of work (PoW).</p>
+                                </div><br>
+                                <div class="fadehidden">
+                                    <h3>Why Does Mining Use So Much Electricity?</h3>
+                                    <p style="text-align: justify;">In the early days of Bitcoin, anybody could simply
+                                        run a mining program from
+                                        their PC or laptop. But as the network got larger and more people became
+                                        interested in mining, the mining algorithm became more difficult. This is
+                                        because the code for Bitcoin targets finding a new block once every 10 minutes,
+                                        on average.
+                                        If more miners are involved, the chances that somebody will solve the right hash
+                                        quicker increases, and so the difficulty increases to restore that 10-minute
+                                        goal. Now imagine if thousands, or even millions more times that mining power
+                                        joins the network. That's a lot of new machines consuming energy.</p>
+                                </div><br>
+                                <div class="fadehidden">
+                                    <h3>Is Bitcoin Mining Legal?</h3>
+                                    <p style="text-align: justify;">The legality of Bitcoin mining depends entirely on
+                                        your geographic location. The
+                                        concept of Bitcoin can threaten the dominance of fiat currencies and government
+                                        control over the financial markets. For this reason, Bitcoin is completely
+                                        illegal in certain places.</p>
+                                </div><br>
+                                <div class="fadehidden">
+                                    <p style="text-align: justify;">Bitcoin ownership and mining are legal in more
+                                        countries than not. Some examples
+                                        of places where it was illegal according to a 2018 report were Algeria, Egypt,
+                                        Morocco, Bolivia, Ecuador, Nepal, and Pakistan.
+                                        Since 2018, other countries have banned Bitcoin mining including Bangladesh,
+                                        China, Dominican Republic, North Macedonia, Qatar, and Vietnam.
+                                        Overall, Bitcoin use and mining remain legal across much of the globe.</p>
+                                </div> <br>
+
+
+
+
+                                <div class="fadehidden">
+                                    <h3>Does Crypto Mining Damage Your GPU/Computer?
+                                    </h3>
+                                    <p style="text-align: justify;">Because blockchain mining is very
+                                        resource-intensive, it can put a large strain
+                                        on your GPU or other mining hardware. In fact, it is not unheard of for GPUs to
+                                        blow out, or for mining rigs to burst into flames.
+                                        However, keeping your rigs running at a moderate pace and with sufficient power
+                                        supplied, it is generally safe.</p>
+                                </div><br>
+                                <div class="fadehidden">
+                                    <h3>Can You Mine Bitcoin on Your iPhone?
+                                    </h3>
+                                    <p style="text-align: justify;">No. Bitcoin mining today requires vast amounts of
+                                        computing power and electricity
+                                        to be competitive. Running a miner on a mobile device, even if it is part of a
+                                        mining pool, will likely result in no earnings.
+
+                                    </p>
+                                </div>
+                                <br>
+                                <div class="fadehidden pt-5" id="bottom">
+                                    <h3>The Bottom Line </h3>
+
+                                    <p style="text-align: justify;">Bitcoin "mining" serves a crucial function to
+                                        validate and confirm new
+                                        transactions to the blockchain and to prevent double-spending by bad actors. It
+                                        is also the way that new bitcoins are introduced into the system. Based on a
+                                        complex puzzle, the task involves producing proof of work (PoW), which is
+                                        inherently energy-intensive. This energy, however, is embodied in the value of
+                                        bitcoins and the Bitcoin system and keeps this decentralized system stable,
+                                        secure, and trustworthy.
+                                    </p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <!-- Footer -->
+            <footer id="icons" class="page-footer font-small" style="background-color: #1c2331; margin-top: 20%;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 py-5">
+                            <div class="mb-5" style="justify-content: space-between;">
+                                <a class="fb-ic lol" href="https://www.facebook.com/profile.php?id=100053190711596">
+                                    <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                                </a>
+                                <a class="tw-ic lol" href="https://twitter.com/saboor_x">
+                                    <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                                </a>
+                                <a class="ins-ic lol" href="https://www.instagram.com/saboorahmed26/">
+                                    <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hrr container">
+                    <hr>
+                </div>
+                <h3
+                    style="color: #fff; font-family: 'Edu TAS Beginner', cursive; font-weight: 600; text-align: center;">
+                    Cryptopedia</h3>
+                <div class="footer-copyright text-center py-3 lol2">© 2022 Copyright:
+                    <a style="pointer-events: none;"> Saboor</a>
+                </div>
+            </footer>
+            <!-- End -->
+
+
+
+            
+  <!-- JavaScript Files -->
+  <script src="../Fontawesome/toc.js"></script>
+  <script src="../Fontawesome/bootstrappopper.js"></script>
+  <script src="../bootstrap-5.2.2-dist/js/bootstrap.js"></script>
+  <script src="../Fontawesome/bootstrap.min.js"></script>
+  <script src="../Fontawesome/all.js"></script>
+  <script src="../UI-Icon-master/package.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/modernizr-2.6.2.min.js"></script>
+  <script src="../js/polyfills.js"></script>
+  <script src="../js/demo1.js"></script>
+
+
+  <!-- JavaScript Files -->
+    
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+body{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.637),rgba(0,0,0,0.637)),url("../images/banner2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1C2331;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #dbdbdbc2;
+}
+
+/* Navbarstart */
+.navbar1{
+    display: block;
+     display: flex;
+      width: 100%;
+      height: 8%;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      padding: 5px 4%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+   }
+   .navbar1 .logo{
+     margin-bottom: 1%;
+   }
+   @media (max-width: 1556px){
+     #trading{
+         display: none;
+     }
+   }
+  .navbar1 .logo h3{
+    
+     margin-top: -3%;
+     position: absolute;
+     font-size: 30px;
+     font-weight: 700;
+     color: white;
+     text-decoration: none;
+     display: flex;
+     width: 18%;
+  }
+  .navbar1 .logo h3:hover{
+     color: white;
+  }
+  .navbar1 .login{
+     margin-left: 100%;
+     max-width: 60px;
+  }
+  .navbar1>ul{
+    justify-content: space-evenly;
+     margin-top: 15px;
+     margin-left: -50px;
+  
+  }
+  .navbar1>ul>li :hover{
+     -webkit-text-stroke: 0.2px #2CD0D3;
+       color: #2CD0D3;
+  }
+  
+  .navbar1>ul>li{
+     list-style: none;
+     display: inline-flex;
+     margin-left: 40px;
+  }
+  .navbar1>ul>li>a{
+     transition: 0.5s;
+     text-decoration: none;
+     color: #fff;
+     font-size: 17px;
+  }
+  .navbar1 .loginbtn{
+    color: rgb(255, 255, 255);
+    border-radius: 24px;
+  }
+  .navbar1 .loginbtn:hover{
+  
+    background-color: #0B5ED7;
+  }
+  @media (max-width: 952px) {
+    * {
+        position: relative;
+    }
+    .navul{
+        display: none !important;
+    }
+
+    #component {
+        display: block !important;
+    }
+}
+    /* Navbar End */
+
+#cdawrap{
+    display: none !important;
+}
+
+.chart-ticker{
+   position: relative;
+height: 1000px;
+}
+
+ .underline{
+    color: #2CD0D3;
+    border-bottom: 3px solid #2CD0D3;
+    font-size: 17px;
+    pointer-events: none;
+    list-style: none;
+    display: inline-flex;
+    margin-left: 40px;
+}
+.content41{
+    margin-top: 13.5% !important;
+    text-align: center;
+}
+.content41 h1{
+    font-size: 130px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+
+.content41>h1:hover{
+
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+.content41>a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+.content41>a:hover{
+    color: #fff;
+
+}

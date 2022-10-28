@@ -1,0 +1,152 @@
+
+
+
+
+body{
+    height: 100%;
+    background-color: #181A20 !important;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1C2331;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #dbdbdbc2;
+}
+
+.tradingview-widget-container{
+    border: 0.5px solid rgba(255, 255, 255, 0.63);
+    margin-top: 4.2rem;
+}
+.chart-ticker{
+  top: 0;
+  width: 980px;
+  height: 700px; 
+  margin:0 auto;
+}
+
+
+/* Navbarstart */
+
+.navbar1{
+  box-shadow:  2px 2px 20px #0d0d0e,
+  -2px -2px 20px ;
+   background-color: #181A20;
+  position: fixed;
+  display: flex;
+   width: 100%;
+   height: 8%;
+   top: 0;
+   left: 0;
+   z-index: 2;
+   padding: 20px 4%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   border-bottom: 0.5px solid rgba(255, 255, 255, 0.363);
+ }
+   .navbar1 .logo{
+     margin-bottom: 1%;
+   }
+   @media (max-width: 1556px){
+     #trading{
+         display: none;
+     }
+   }
+  .navbar1 .logo h3{
+    
+     margin-top: -3%;
+     position: absolute;
+     font-size: 30px;
+     font-weight: 700;
+     color: white;
+     text-decoration: none;
+     display: flex;
+     width: 18%;
+  }
+  .navbar1 .logo h3:hover{
+     color: white;
+  }
+  .navbar1 .login{
+     margin-left: 100%;
+     max-width: 60px;
+  }
+  .navbar1>ul{
+    justify-content: space-evenly;
+     margin-top: 15px;
+     margin-left: -50px;
+  
+  }
+  .navbar1>ul>li :hover{
+     -webkit-text-stroke: 0.2px #2CD0D3;
+       color: #2CD0D3;
+  }
+  
+  .navbar1>ul>li{
+     list-style: none;
+     display: inline-flex;
+     margin-left: 40px;
+  }
+  .navbar1>ul>li>a{
+     transition: 0.5s;
+     text-decoration: none;
+     color: #fff;
+     font-size: 17px;
+  }
+  .navbar1 .loginbtn{
+    color: rgb(255, 255, 255);
+    border-radius: 24px;
+  }
+  .navbar1 .loginbtn:hover{
+  
+    background-color: #0B5ED7;
+  }
+
+  @media (max-width: 952px) {
+      * {
+          position: relative;
+      }
+      .navul{
+          display: none !important;
+      }
+  
+      #component {
+          display: block !important;
+      }
+  }
+    /* Navbar End */
+/* Footer */
+  
+.hrr hr
+{
+    margin-top: -20px;
+    color: #666a75;
+  border-top-color:rgb(255, 255, 255);
+}
+#icons{
+    display: block;
+    text-align: center;
+    align-items: center;
+}
+ #icons a{
+    text-decoration: none;
+    color: #e4e5e6;
+    cursor: pointer;
+}
+
+.lol{
+    padding: 5%;
+}
+.line{
+    opacity: 3;
+}
+.lol2{
+    color: #e4e5e6;
+}
+/* Footercss */
